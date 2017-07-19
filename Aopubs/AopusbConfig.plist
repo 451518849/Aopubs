@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>single_gesture_tap_ubs</key>
+	<dict>
+		<key>GestureTapController</key>
+		<dict>
+			<key>singleTap</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>tableviewcell_ubs</key>
+	<dict>
+		<key>ViewController</key>
+		<dict/>
+	</dict>
+	<key>button_ubs</key>
+	<dict>
+		<key>ButtonEventController</key>
+		<dict>
+			<key>clickButton</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>controller_ubs</key>
+	<dict>
+		<key>ViewController</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

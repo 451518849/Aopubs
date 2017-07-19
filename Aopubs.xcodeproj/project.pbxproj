@@ -13,6 +13,13 @@
 		A5CB40FC1F1DE5340001189A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CB40FA1F1DE5340001189A /* Main.storyboard */; };
 		A5CB40FE1F1DE5340001189A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CB40FD1F1DE5340001189A /* Assets.xcassets */; };
 		A5CB41011F1DE5340001189A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CB40FF1F1DE5340001189A /* LaunchScreen.storyboard */; };
+		A5CB410B1F1DE5720001189A /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CB410A1F1DE5720001189A /* Aspects.m */; };
+		A5CB410F1F1DE5FD0001189A /* Aopubs.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CB410E1F1DE5FD0001189A /* Aopubs.m */; };
+		A5CB41111F1DE64C0001189A /* AopusbConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5CB41101F1DE64C0001189A /* AopusbConfig.plist */; };
+		A5DDA9871F1F091700696139 /* GestureTapController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDA9861F1F091700696139 /* GestureTapController.m */; };
+		A5DDA98A1F1F092800696139 /* ButtonEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDA9891F1F092800696139 /* ButtonEventController.m */; };
+		A5DDA98D1F1F3AF900696139 /* AopubsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDA98C1F1F3AF900696139 /* AopubsUploader.m */; };
+		A5DDA9901F1F43CE00696139 /* AopubsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDA98F1F1F43CE00696139 /* AopubsCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,19 @@
 		A5CB40FD1F1DE5340001189A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5CB41001F1DE5340001189A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5CB41021F1DE5340001189A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5CB41091F1DE5720001189A /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		A5CB410A1F1DE5720001189A /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		A5CB410D1F1DE5FD0001189A /* Aopubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aopubs.h; sourceTree = "<group>"; };
+		A5CB410E1F1DE5FD0001189A /* Aopubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aopubs.m; sourceTree = "<group>"; };
+		A5CB41101F1DE64C0001189A /* AopusbConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AopusbConfig.plist; sourceTree = "<group>"; };
+		A5DDA9851F1F091700696139 /* GestureTapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTapController.h; sourceTree = "<group>"; };
+		A5DDA9861F1F091700696139 /* GestureTapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTapController.m; sourceTree = "<group>"; };
+		A5DDA9881F1F092800696139 /* ButtonEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonEventController.h; sourceTree = "<group>"; };
+		A5DDA9891F1F092800696139 /* ButtonEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonEventController.m; sourceTree = "<group>"; };
+		A5DDA98B1F1F3AF900696139 /* AopubsUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AopubsUploader.h; sourceTree = "<group>"; };
+		A5DDA98C1F1F3AF900696139 /* AopubsUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AopubsUploader.m; sourceTree = "<group>"; };
+		A5DDA98E1F1F43CE00696139 /* AopubsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AopubsCache.h; sourceTree = "<group>"; };
+		A5DDA98F1F1F43CE00696139 /* AopubsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AopubsCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +78,20 @@
 		A5CB40F01F1DE5340001189A /* Aopubs */ = {
 			isa = PBXGroup;
 			children = (
+				A5CB41081F1DE5720001189A /* Aspects */,
+				A5CB410C1F1DE5DE0001189A /* Aopubs */,
 				A5CB40F41F1DE5340001189A /* AppDelegate.h */,
 				A5CB40F51F1DE5340001189A /* AppDelegate.m */,
 				A5CB40F71F1DE5340001189A /* ViewController.h */,
 				A5CB40F81F1DE5340001189A /* ViewController.m */,
+				A5DDA9851F1F091700696139 /* GestureTapController.h */,
+				A5DDA9861F1F091700696139 /* GestureTapController.m */,
+				A5DDA9881F1F092800696139 /* ButtonEventController.h */,
+				A5DDA9891F1F092800696139 /* ButtonEventController.m */,
 				A5CB40FA1F1DE5340001189A /* Main.storyboard */,
 				A5CB40FD1F1DE5340001189A /* Assets.xcassets */,
 				A5CB40FF1F1DE5340001189A /* LaunchScreen.storyboard */,
+				A5CB41101F1DE64C0001189A /* AopusbConfig.plist */,
 				A5CB41021F1DE5340001189A /* Info.plist */,
 				A5CB40F11F1DE5340001189A /* Supporting Files */,
 			);
@@ -77,6 +104,28 @@
 				A5CB40F21F1DE5340001189A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5CB41081F1DE5720001189A /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				A5CB41091F1DE5720001189A /* Aspects.h */,
+				A5CB410A1F1DE5720001189A /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+		A5CB410C1F1DE5DE0001189A /* Aopubs */ = {
+			isa = PBXGroup;
+			children = (
+				A5CB410D1F1DE5FD0001189A /* Aopubs.h */,
+				A5CB410E1F1DE5FD0001189A /* Aopubs.m */,
+				A5DDA98B1F1F3AF900696139 /* AopubsUploader.h */,
+				A5DDA98C1F1F3AF900696139 /* AopubsUploader.m */,
+				A5DDA98E1F1F43CE00696139 /* AopubsCache.h */,
+				A5DDA98F1F1F43CE00696139 /* AopubsCache.m */,
+			);
+			path = Aopubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CB41111F1DE64C0001189A /* AopusbConfig.plist in Resources */,
 				A5CB41011F1DE5340001189A /* LaunchScreen.storyboard in Resources */,
 				A5CB40FE1F1DE5340001189A /* Assets.xcassets in Resources */,
 				A5CB40FC1F1DE5340001189A /* Main.storyboard in Resources */,
@@ -151,8 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5CB40F91F1DE5340001189A /* ViewController.m in Sources */,
+				A5DDA98D1F1F3AF900696139 /* AopubsUploader.m in Sources */,
 				A5CB40F61F1DE5340001189A /* AppDelegate.m in Sources */,
 				A5CB40F31F1DE5340001189A /* main.m in Sources */,
+				A5DDA9901F1F43CE00696139 /* AopubsCache.m in Sources */,
+				A5DDA98A1F1F092800696139 /* ButtonEventController.m in Sources */,
+				A5CB410B1F1DE5720001189A /* Aspects.m in Sources */,
+				A5CB410F1F1DE5FD0001189A /* Aopubs.m in Sources */,
+				A5DDA9871F1F091700696139 /* GestureTapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +367,7 @@
 				A5CB41071F1DE5340001189A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
