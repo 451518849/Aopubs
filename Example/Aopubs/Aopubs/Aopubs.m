@@ -56,6 +56,8 @@ static Aopubs * _AopubsInstance                = nil;
 
 - (void)defaultConfig {
     
+    _maxCountOfUploadEvent = MaxUploadCount;
+    
     [self configureDicWithPlistFile:@"AopusbConfig"];
     [self addUbsForControllerWithState:AopubsControllerWillAppearState|AopubsControllerDidAppearState];
     [self addUbsForButtonEvent];
@@ -322,11 +324,13 @@ static Aopubs * _AopubsInstance                = nil;
     NSString *dateTime        = [formatter stringFromDate:[NSDate date]];
     
     // parameter
-    NSDictionary *ubs_data = @{@"event_id":selectorString,@"user_id":@"1",@"time":dateTime};
+    NSDictionary *ubs_data = @{@"event_id":selectorString,
+                               @"user_id":@"1",
+                               @"time":dateTime};
     
     [self.eventArr addObject:ubs_data];
     
-    if ([self.eventArr count] >= MaxUploadCount) {
+    if ([self.eventArr count] >= _maxCountOfUploadEvent) {
         
         id parameter = [self.eventArr subarrayWithRange:NSMakeRange(0, 10)];
         _uploadArr   = [parameter copy];

@@ -55,6 +55,10 @@ pod install Aopubs
 	- (void)handlUbsEventWithData:(_Nullable id<AspectInfo>)data;
 	
 	@end
+	
+## Default Data upload
+{@"event_id":@"",@"user_id":@"",@"time":@""}
+根据上面的字段，创建所需的数据库
 
 # more
 详情或源码请看Example。
