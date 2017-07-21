@@ -334,10 +334,14 @@ static Aopubs * _AopubsInstance                = nil;
         [[AopubsUploader shareInstance] uploadUbsWithMethod:AopubsUploaderPostMethod
                                                         URL:_uploadURL
                                                   parameter:parameter
-                                             completedBlock:^(id  _Nullable completedBlock) {
+                                             completedBlock:^(id  _Nullable completedBlock){
                                                  
                                                  NSLog(@"success upload ubs");
                                                  [self.eventArr removeObjectsInArray:_uploadArr];
+            
+        } error:^(id  _Nullable errorBlock) {
+            
+            NSLog(@"fail to  upload ubs");
             
         }];
         

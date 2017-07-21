@@ -23,7 +23,8 @@ static AopubsUploader *_aopubsUploader = nil;
 - (void)uploadUbsWithMethod:(AopubsUploaderMethod)method
                         URL:(NSString *)urlString
                   parameter:(id)parameter
-             completedBlock:(AopubsUploaderCompletedBlock)completedBlock{
+             completedBlock:(AopubsUploaderCompletedBlock)completedBlock
+                      error:(AopubsUploaderError)errorBlock{
     
     
     if (urlString.length == 0) {
@@ -39,7 +40,7 @@ static AopubsUploader *_aopubsUploader = nil;
     }
     else if (method == AopubsUploaderPostMethod) {
         
-        [self postUploadUbsWithURL:urlString parameter:parameter completedBlock:completedBlock];
+        [self postUploadUbsWithURL:urlString parameter:parameter completedBlock:completedBlock error:errorBlock];
         
     }
     else {
@@ -48,7 +49,10 @@ static AopubsUploader *_aopubsUploader = nil;
     
 }
 
-- (void)postUploadUbsWithURL:(NSString *)urlString parameter:(id)parameter completedBlock:(AopubsUploaderCompletedBlock)completedBlock{
+- (void)postUploadUbsWithURL:(NSString *)urlString
+                   parameter:(id)parameter
+              completedBlock:(AopubsUploaderCompletedBlock)completedBlock
+                       error:(AopubsUploaderError)errorBlock{
     
     NSURLSession *session        = [NSURLSession sharedSession];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
@@ -63,8 +67,14 @@ static AopubsUploader *_aopubsUploader = nil;
                                                                   NSURLResponse * _Nullable response,
                                                                   NSError * _Nullable error) {
                                                   
-                                                  
-                                                  completedBlock(data);
+                                                  if (error) {
+                                                      
+                                                      errorBlock(error);
+                                                  }
+                                                  else {
+                                                      
+                                                      completedBlock(data);
+                                                  }
     }];
     
     [uploadTask resume];

@@ -21,6 +21,8 @@
     // Override point for customization after application launch.
     
     [[Aopubs shareInstance] defaultConfig];
+    [Aopubs shareInstance].uploadURL = @"";
+    
 //    [[Aopubs shareInstance] configureDicWithPlistFile:@"AopusbConfig"];
 //    [[Aopubs shareInstance] addUbsForControllerWithState:AopubsControllerWillAppearState|AopubsControllerDidAppearState];
 //    [[Aopubs shareInstance] addUbsForButtonEvent];

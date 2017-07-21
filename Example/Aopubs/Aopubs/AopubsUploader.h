@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, AopubsUploaderMethod) {
 };
 
 typedef void(^AopubsUploaderCompletedBlock)(id _Nullable completedBlock);
+typedef void(^AopubsUploaderError)(id _Nullable errorBlock);
 
 @interface AopubsUploader : NSObject
 
@@ -24,7 +25,8 @@ typedef void(^AopubsUploaderCompletedBlock)(id _Nullable completedBlock);
 - (void)uploadUbsWithMethod:(AopubsUploaderMethod)method
                         URL:(NSString *_Nullable)urlString
                   parameter:(id _Nullable )parameter
-             completedBlock:(AopubsUploaderCompletedBlock _Nullable )completedBlock;
+             completedBlock:(AopubsUploaderCompletedBlock _Nullable )completedBlock
+                      error:(AopubsUploaderError _Nullable )errorBlock;
 
 
 @end

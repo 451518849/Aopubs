@@ -41,11 +41,20 @@ pod install Aopubs
 	    // Override point for customization after application launch.
 	    
 	    [[Aopubs shareInstance] defaultConfig];
-	
+	    [Aopubs shareInstance].uploadURL = @"";
+
 	    return YES;
 	}
 
+3.如果需要自定义上传数据的操作需要在AppDelegate中实现AopubsDelegate
 
+	@protocol AopubsDelegate <NSObject>
+	
+	@optional
+	
+	- (void)handlUbsEventWithData:(_Nullable id<AspectInfo>)data;
+	
+	@end
 
 # more
 详情或源码请看Example。
