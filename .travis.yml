@@ -6,8 +6,8 @@ before_install:
 - brew update
 - gem install fir-cli
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/app_for_adolescent_spine.mobileprovision.enc
-  -d -a -out scripts/profile/app_for_adolescent_spine.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/$PROFILE_NAME.mobileprovision.enc
+  -d -a -out scripts/profile/$PROFILE_NAME.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/ios_development.cer.enc
   -d -a -out scripts/certs/ios_development.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/certs.p12.enc -d -a
