@@ -6,8 +6,8 @@ before_install:
 - brew update
 - gem install fir-cli
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/patient_adolescent_spin_distribute.mobileprovision.enc
-  -d -a -out scripts/profile/patient_adolescent_spin_distribute.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/app_for_adolescent_spine.mobileprovision.enc
+  -d -a -out scripts/profile/app_for_adolescent_spine.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/ios_development.cer.enc
   -d -a -out scripts/certs/ios_development.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/certs.p12.enc -d -a
@@ -23,7 +23,6 @@ after_script:
 env:
   global:
   - APP_NAME="Aopubs"
-  - 'DEVELOPER_NAME="iPhone Distribution: Nanjing Baicheng Medical Technology Co. , Ltd. (4ZF859MBSZ)"'
-  - PROFILE_NAME="patient_adolescent_spin_distribute"
+  - 'DEVELOPER_NAME="iPhone Developer: Zhiwei Lin (PE53UGCLR6)"'
+  - PROFILE_NAME="app_for_adolescent_spine"
   - secure: uYR2DZTlsU9vK7aLeKmORlwerf0hcu67VycR7z63QdhRFxc9/IxzQNCZwtzNgDhQFBJfP2JRlROj4fK1k8tQnYEw6tbrDcUabqDTCOeRE98gETEmMVH/YtEnqXTwpUazC6wtv71JULEFClfUw+iF3owFzjaaXloBeJHXsOwnqHWLewAfDvhcpBCnRFxEgSoL3wV5+BuxSZj9fa74MNhwHEuC648aNikifjBKGzxd7vd5Ky/9AiQ7Ur0HLfnWZy0bZEr/b9TN2UKrOPgCH9LYarwinVoTgdY1aTgzIO2+HMP6rOUrnWSdepHPFNk+leMGdfnR1iGnoU+8ymq+chjitoarR6UctK1+YmD/XXvm3AjByvuF/ULiQylRo5Wg/U+lhFLGROK+GgMO/4dwh5DwEzj8zT6uQkI3YAP1FqR170f48V6eOcBF3liLsY++BHs8WG8b0I3uH+SQ9gxG/OX7hjwOvetb5ZSnmlkWb7ICUDBqY6dyxkPcZBidazJZxjrjBFMWn3ZqR+YSa/4PL6KgT+QZLU/F3Z91001amR+6IlLngVx0kbBjy7BRjow/aShK6Eqqn2A/qFX6Kxe+rHer9DMPe6lTfv6MWJlXw8vSRqSKWzM+12swR0eJ+JUx+Ei9RX47eSp529LfJXzDj1accTt/Z8aZvOEN5iLEaTDIAvA=
-
