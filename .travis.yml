@@ -1,4 +1,4 @@
 language: objective-c 
 os: osx
 xcode_project: Example/Aopubs.xcodeproj
-xcode_scheme: Aopubs
+xcode_scheme:  Example/Aopubs
